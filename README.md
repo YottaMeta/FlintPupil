@@ -102,7 +102,7 @@ sudo ./uninstall.sh --images   # 同时删除本地镜像
 ## 镜像仓库
 
 - GitHub：<https://github.com/YottaMeta/FlintPupil>
-- Gitee：<https://gitee.com/yottameta/FlintPupil>
+- Gitee：<https://gitee.com/yottameta/flint-pupil>
 
 ## 反馈
 
