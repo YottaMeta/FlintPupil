@@ -2,3 +2,4 @@
 *.md text eol=lf
 LICENSE text eol=lf
 SHA256SUMS text eol=lf
+SHA256SUMS.parts text eol=lf

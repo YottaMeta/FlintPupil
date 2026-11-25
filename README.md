@@ -65,6 +65,21 @@ sudo ./install.sh [选项]
 
 完整步骤见 [安装手册](docs/安装手册-0.18.7.md)。
 
+## Gitee 镜像（分卷下载）
+
+Gitee 单附件上限 100 MB，社区包在 Gitee 以 3 个分卷发布；下载后合并并校验：
+
+```bash
+BASE=https://gitee.com/yottameta/flint-pupil/releases/download/v0.18.7
+for i in 00 01 02; do
+  curl -LO "$BASE/FlintPupil-community-0.18.7-linux-amd64.tar.gz.part$i"
+done
+cat FlintPupil-community-0.18.7-linux-amd64.tar.gz.part0* > FlintPupil-community-0.18.7-linux-amd64.tar.gz
+sha256sum -c FlintPupil-community-0.18.7-linux-amd64.tar.gz.sha256
+```
+
+分卷各自的校验值见 [SHA256SUMS.parts](SHA256SUMS.parts)；合并后的整包校验值与 GitHub 一致。
+
 ## 升级
 
 用新版本交付包执行：
